@@ -1,0 +1,19 @@
+<div *ngIf="showSuccess" class="notification success">
+  <p>{{ successMessage }}</p>
+  <button (click)="closeNotification('success')">Cerrar</button>
+</div>
+
+<div *ngIf="showError" class="notification error">
+  <p>{{ errorMessage }}</p>
+  <button (click)="closeNotification('error')">Cerrar</button>
+</div>
+
+<div *ngIf="showWarning" class="notification warning">
+  <p>{{ warningMessage }}</p>
+  <button (click)="closeNotification('warning')">Cerrar</button>
+</div>
+
+<div *ngIf="showInfo" class="notification info">
+  <p>{{ infoMessage }}</p>
+  <button (click)="closeNotification('info')">Cerrar</button>
+</div>

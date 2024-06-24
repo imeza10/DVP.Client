@@ -1,0 +1,7 @@
+<div *ngIf="user">
+  <h2>{{ user.login }}</h2>
+  <img [src]="user.avatar_url" alt="Avatar" class="img-thumbnail" width="150">
+  <p>ID: {{ user.id }}</p>
+  <p>Seguidores: {{ user.followers }}</p>
+  <p>Siguiendo: {{ user.following }}</p>
+</div>

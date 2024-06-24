@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Buscar usuario en GitHub" [(ngModel)]="searchQuery" (keyup)="validateQuery($event)">
+    <button class="btn btn-primary" (click)="searchUsers()" [disabled]="isSearchDisabled">Buscar</button>
+  </div>
+  <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+  <ul class="list-group">
+    <li *ngFor="let user of users" class="list-group-item">
+      <a [routerLink]="['/profile', user.login]">{{ user.login }} (ID: {{ user.id }})</a>
+    </li>
+  </ul>
+</div>
+
+
+<div *ngIf="users.length > 0">
+  <ngx-charts-bar-vertical
+    [view]="view"
+    scheme="cool"
+    [results]="single"
+    [gradient]="gradient"
+    [xAxis]="showXAxis"
+    [yAxis]="showYAxis"
+    [legend]="showLegend"
+    [showXAxisLabel]="showXAxisLabel"
+    [showYAxisLabel]="showYAxisLabel"
+    [xAxisLabel]="xAxisLabel"
+    [yAxisLabel]="yAxisLabel"
+    (select)="onSelect($event)">
+  </ngx-charts-bar-vertical>
+</div>
+
+
