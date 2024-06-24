@@ -1,0 +1,7 @@
+.list-group-item i {
+  margin-right: 10px; /* Ajusta el espacio entre el icono y el texto */
+  color: #ffffff; /* Cambia el color del icono */
+  border-radius: 50%; /* Hace que el icono sea redondo */
+  background-color: #312e2e; /* Color de fondo del icono */
+  padding: 8px; /* Espacio dentro del icono */
+}

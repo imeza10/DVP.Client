@@ -6,7 +6,10 @@
   <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
   <ul class="list-group">
     <li *ngFor="let user of users" class="list-group-item">
-      <a [routerLink]="['/profile', user.login]">{{ user.login }} (ID: {{ user.id }})</a>
+      <i class="fa fa-user-circle"></i>
+      <a [routerLink]="['/profile', user.login]">
+        {{ user.login }} (ID: {{ user.id }})
+      </a>
     </li>
   </ul>
 </div>
